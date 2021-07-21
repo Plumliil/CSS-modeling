@@ -1,0 +1,1045 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #82d4e6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    perspective: 100;
+    margin-top: 200px;
+    transform-style: preserve-3d;
+    transform: scale(1);
+}
+
+.container .cube {
+    perspective-origin: center;
+    width: 500px;
+    height: 700px;
+    border-bottom: 15px #90a2ac solid;
+    border-right: 20px #c7d2da solid;
+    border-left: none;
+    border-top: none;
+    background-color: #e8dfc9;
+    transform-style: preserve-3d;
+    transform: rotatex(45deg) rotatez(60deg);
+}
+
+.cube .top,
+.cube .bottom,
+.cube .front,
+.cube .back,
+.cube .left,
+.cube .right,
+.cube .sports,
+.cube .bed {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    /* background-color: brown; */
+    transform: translateX(150PX) translateY(150PX);
+}
+
+.cube .left {
+    border-left: 30px #e0e7f0 solid;
+    border-top: 25px #c7d2da solid;
+    border-bottom: none;
+    border-right: none;
+    width: 300px;
+    height: 500px;
+    background-color: #b9c4cc;
+    transform: translateX(-11px) translatey(-325px) translateZ(40px) rotateZ(90deg) rotateY(90deg);
+}
+
+.cube .right {
+    /* background-color: pink;
+    transform: translateX(150px) translatey(400px) rotateZ(90deg) rotateY(90deg); */
+}
+
+.cube .top {
+    border-left: 30px #e0e7f1 solid;
+    border-bottom: 15px #90a3a4 solid;
+    border-top: none;
+    border-right: none;
+    width: 300px;
+    height: 700px;
+    background-color: #c0cbd3;
+    /* box-shadow: 10px 100px 1px 10px ; */
+    transform: rotateY(90deg) translatez(-178px) translateX(-150px) translateY(-7.5px);
+}
+
+.cube .bottom {
+    /* background-color:black;
+    transform:translateX(300px) translateY(150px) rotateY(90deg) translatez(100px); */
+}
+
+/* 运动部分 */
+.cube .sports {
+    transform-style: preserve-3d;
+    width: 250px;
+    height: 150px;
+    /* border-left: 1px gray solid; */
+    border-top: 1px gray solid;
+    border-bottom: 10px #94a3b2 solid;
+    border-right: 20px #c7d2da solid;
+    background-color: #e8dfc9;
+    transform: translateY(700px) translateX(250px);
+
+}
+
+.cube .sports .equipment {
+    position: relative;
+}
+
+.cube .sports .equipment span {
+    position: absolute;
+    background-color: rgb(34, 33, 33);
+    box-shadow: 0px 10px 18px 1px;
+}
+
+.cube .sports .equipment .equipment_a {
+    top: 80px;
+    left: 80px;
+    width: 30px;
+    height: 20px;
+    transform: rotate(30deg);
+    border-radius: 30%;
+}
+
+.cube .sports .equipment .equipment_line {
+    top: 61px;
+    left: 90px;
+    width: 35px;
+    height: 1px;
+    background-color: gray;
+    border: 3px gray solid;
+    transform: rotate(120deg);
+}
+
+.cube .sports .equipment .equipment_b {
+    top: 30px;
+    left: 110px;
+    width: 30px;
+    height: 20px;
+    transform: rotate(30deg);
+    border-radius: 30%;
+}
+
+/* 床 */
+/* 床 */
+/* 床 */
+/* 床 */
+/* 床 */
+.cube .bed {
+    background-color: gray;
+    width: 250px;
+    height: 180px;
+    border-bottom: 10px #c6a180 solid;
+    box-shadow: 0px 10px 10px 1px rgb(0, 0, 0, .5);
+    /* transform: translateX(-500px); */
+    transform: scale(.8) translateX(20px) translateY(600px) translateZ(30px);
+}
+
+.cube .bed .bed_head,
+.cube .bed .bed_tailstock,
+.cube .bed .bed_quilt_head,
+.cube .bed .bed_quilt_tailstock,
+.cube .bed .pillow_a,
+.cube .bed .pillow_b {
+    position: absolute;
+}
+
+.cube .bed .bed_head {
+    transform-style: preserve-3d;
+    /* position: absolute; */
+    width: 75px;
+    height: 310px;
+    /* border-top: 20px #cfad95 solid; */
+    border-bottom: 20px #cba183 solid;
+    border-left: 20px #fdedc5 solid;
+    border-right: none;
+    background-color: #e6c8a0;
+    transform: rotatex(50deg) rotateY(35deg) translateX(-100px) translateY(-58px);
+}
+
+.cube .bed .bed_tailstock {
+    transform-style: preserve-3d;
+    /* position: absolute; */
+    width: 50px;
+    height: 380px;
+    border: 20px #fdecc3 solid;
+    border-bottom: 20px #c8a183 solid;
+    border-right: 10px rgb(128, 128, 128, .4) solid;
+    border-top: none;
+    background-color: #e6c8a0;
+    transform: rotatex(60deg) rotateY(30deg) translateX(230px) translateY(-420px);
+}
+
+.cube .bed .bed_quilt_head {
+    /* position: absolute; */
+    width: 90px;
+    height: 165px;
+    background-color: snow;
+    /* border-left: px gray solid; */
+    border-bottom: 15px #bec2b8 solid;
+    transform: translateX(-50deg);
+}
+
+.cube .bed .bed_quilt_tailstock {
+    width: 130px;
+    height: 165px;
+    background-color: skyblue;
+    /* border-left: px gray solid; */
+    border-bottom: 15px #538492 solid;
+    left: 90px;
+}
+
+.cube .bed .pillow_a {
+    width: 50px;
+    height: 70px;
+    border-right: 7px solid #d5d9d0;
+    border-bottom: 6px solid #c0c2ca;
+    box-shadow: 10px 0px 10px 1px rgb(128, 128, 128, .5);
+    background-color: #edeae0;
+}
+
+.cube .bed .pillow_b {
+    left: 10px;
+    top: 80px;
+    width: 50px;
+    height: 70px;
+    border-right: 7px solid #d5d9d0;
+    border-bottom: 6px solid #c0c2ca;
+    box-shadow: 10px 0px 10px 1px rgb(128, 128, 128, .5);
+    background-color: #edeae0;
+    transform: rotate(-10deg) translateX(-10px);
+}
+
+/* 床头柜 */
+.bedBesideTable {
+    perspective: 3000;
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 400px;
+    left: 16px;
+    /* animation: BesideTable 30s infinite; */
+    z-index: 1;
+}
+
+@keyframes BesideTable {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.bedBesideTable_top,
+.bedBesideTable_bottom,
+.bedBesideTable_front,
+.bedBesideTable_back,
+.bedBesideTable_left,
+.bedBesideTable_right_t,
+.bedBesideTable_right_b {
+    position: absolute;
+    background-color: black;
+    width: 50px;
+    height: 70px;
+    top: 25px;
+    left: 25px;
+}
+
+.bedBesideTable_top {
+    width: 100px;
+    background-color: gray;
+    transform: translateZ(10px) rotateY(90deg) translateX(-15px) translateZ(-50px);
+}
+
+.bedBesideTable_front {
+    /* 柜子右 */
+    width: 75px;
+    height: 50px;
+    background-color: pink;
+    transform: translateZ(88px) rotatey(90deg) rotateX(90deg) translateX(50px) translateY(-12.5px) translateZ(25px);
+}
+
+.bedBesideTable_back {
+    /* 柜子左 */
+    width: 75px;
+    height: 50px;
+    background-color: #cba081;
+    transform: translateZ(88px) rotatey(90deg) rotateX(90deg) translateX(50px) translateY(-13px) translateZ(-45px);
+}
+
+.bedBesideTable_left {
+    /* 柜子上 */
+    background-color: #feebc6;
+    transform: translateZ(75px);
+}
+
+.bedBesideTable_right_t {
+    /* 柜子正面 */
+    width: 38px;
+    background-color: #e6c8a0;
+    border-right: 1.8px solid #fbe5ba;
+    transform: translateZ(75px) rotateY(90deg) translateX(20px) translateZ(30px) translateY(0px);
+}
+
+.bedBesideTable_handle {
+    position: absolute;
+    top: 26px;
+    left: 20px;
+    width: 3px;
+    height: 10px;
+    /* #d7dad0 */
+    background-color: snow;
+    border-left: 3px #ece6d5 solid;
+    border-bottom: 3px #c9c8ba solid;
+    border-top: 1px snow solid;
+    border-right: none;
+}
+
+.bedBesideTable_right_b {
+    /* 柜子正面 */
+    width: 38px;
+    background-color: #e6c8a0;
+    border-left: 1.8px solid #fbe5ba;
+    transform: translateZ(75px) rotateY(90deg) translateX(60px) translateZ(30px) translateY(0px);
+}
+
+/* 壁柜 */
+.cupboard {
+    perspective: 3000;
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 250px;
+    left: -310px;
+    transform: translateZ(150px);
+    z-index: 1;
+}
+
+.cupboard_top,
+.cupboard_bottom,
+.cupboard_front,
+.cupboard_back,
+.cupboard_left,
+.cupboard_right,
+.cupboardDoor_l,
+.cupboardDoor_r {
+    position: absolute;
+    width: 50px;
+    height: 135px;
+    top: 250px;
+    left: 300px;
+}
+
+.cupboard_top {
+    background-color: #a6aaa1;
+    transform: translateZ(10px) rotateY(90deg) translateX(-10px) translateZ(-25px);
+}
+
+.cupboard_front {
+    /* 柜子右 */
+    width: 75px;
+    height: 50px;
+    background-color: #bdc2b9;
+    transform: translateZ(88px) rotatey(90deg) rotateX(90deg) translateX(50px) translateY(-12.5px) translateZ(25px);
+}
+
+.cupboard_back {
+    /* 柜子左 */
+    width: 75px;
+    height: 50px;
+    background-color: #bdc2b9;
+    transform: translateZ(88px) rotatey(90deg) rotateX(90deg) translateX(50px) translateY(-13px) translateZ(-111px);
+}
+
+.cupboard_left {
+    /* 柜子上 */
+    background-color: #edeae0;
+    transform: translateZ(75px);
+}
+
+ .cupboardDoor_l{
+    width: 75px;
+    height: 65px;
+    background-color: #d6dad1;
+    border-top: 5px solid #d0d4cc;
+    transform: translateZ(75px) rotateY(90deg) translateX(21px) translateZ(27px) translateY(75px);
+}
+.cupboardDoor_r{
+    width: 75px;
+    height: 65px;
+    background-color: #d6dad1;
+    transform: translateZ(75px) rotateY(90deg) translateX(30px) translateZ(30px) translateY(15px) rotateX(-25deg);
+}
+
+
+/* 衣柜 */
+.wardrobe {
+    position: absolute;
+    transform-style: preserve-3d;
+    left: 0px;
+    top: 200px;
+}
+
+.wardrobe_top,
+.wardrobe_bottom,
+.wardrobe_front,
+.wardrobe_back,
+.wardrobe_left,
+.cabinetDoor {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+}
+
+.wardrobe_left {
+    /* 柜子下 */
+    width: 50px;
+    /* background-color:black; */
+}
+
+.wardrobe_back {
+    /* 柜子后 */
+    height: 200px;
+    background-color: #b79774;
+    transform: translateZ(100px) rotateY(90deg) translateY(0px) translateZ(-100px);
+}
+
+.wardrobe_top {
+    /* 柜子右 */
+    width: 50px;
+    background-color: #b79774;
+    transform: translateZ(100px) rotateX(90deg) translateZ(100px);
+}
+
+.wardrobe_bottom {
+    /* 柜子左 */
+    width: 50px;
+    background-color: #c8a081;
+    transform: translateZ(100px) rotateX(90deg)translateZ(-100px);
+}
+
+.wardrobe_front {
+    /* 柜子上 */
+    width: 50px;
+    background-color: #ffecc9;
+    transform: translateZ(200px);
+}
+
+.cabinetDoor {
+    width: 55px;
+    height: 190px;
+    border-top: 6px rgb(128, 128, 128, .5) solid;
+    border-right: 5px #b99b7a solid;
+    border-left: 5px #cfad8a solid;
+    border-bottom: 5px #fce28c solid;
+    background-color: #e6c8a0;
+    /* background-color: teal; */
+}
+
+.cabinetDoor.a {
+    /* 左一 */
+    transform: translateZ(100px) rotateX(90deg) rotateY(90deg) translatez(17px) translateX(68px);
+}
+
+.cabinetDoor.b {
+    /* 左二 */
+    transform: translateZ(100px) rotateX(90deg) rotateY(90deg) translatez(17px) translateX(3px);
+}
+
+.cabinetDoor.c {
+    /* 左三 */
+    transform: translateZ(100px) rotateX(90deg) rotateY(90deg) translatez(32px) translateX(-53px) rotateY(30deg);
+}
+
+.cabinetDoorHandle {
+    position: absolute;
+    top: 85px;
+    left: 8px;
+    width: 2px;
+    height: 20px;
+    /* #d7dad0 */
+    background-color: snow;
+    border-left: 3px #ece6d5 solid;
+    border-bottom: 3px #c9c8ba solid;
+    border-top: 1px snow solid;
+    border-right: none;
+}
+
+/* 书柜 */
+/* 书柜 */
+/* 书柜 */
+/* 书柜 */
+/* 书柜 */
+/* 书柜 */
+/* 书柜 */
+/* 书柜 */
+/* 书柜 */
+/* 书柜 */
+.bookcase {
+    position: absolute;
+    transform-style: preserve-3d;
+}
+
+.bookcase_top,
+.bookcase_bottom,
+.bookcase_front,
+.bookcase_back,
+.bookcase_left,
+.clapboard {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+}
+
+.bookcase_left {
+    /* 柜子下 */
+    width: 50px;
+    background-color: #c8a081;
+    border-right: 5px solid #e5c6a2;
+    box-shadow: 0px 0px 10px 0px;
+    transform: translateZ(3px) translateX(30deg);
+}
+
+.bookcase_back {
+    /* 柜子后 */
+    height: 200px;
+    background-color: #a9b7bd;
+    transform: translateZ(100px) rotateY(90deg) translateY(0px) translateZ(-100px);
+}
+
+.bookcase_top {
+    width: 50px;
+    background-color: #b89678;
+    transform: translateZ(100px) rotateX(90deg) translateZ(100px);
+}
+
+.bookcase_bottom {
+    width: 50px;
+    background-color: royalblue;
+    transform: translateZ(100px) rotateX(90deg)translateZ(-100px);
+}
+
+.bookcase_front {
+    width: 50px;
+    background-color: #e6c8a0;
+    transform: translateZ(200px);
+}
+
+.clapboard {
+    width: 50px;
+    background-color: #c8a081;
+    transform: rotateY(30deg);
+}
+
+.clapboard.a {
+    border-right: 5px solid #e5c6a2;
+    transform: translateZ(130px) rotateY(-10deg) translateX(-10px);
+}
+
+.clapboard.b {
+    border-right: 5px solid #e5c6a2;
+    transform: translateZ(70px) rotateY(-20deg);
+}
+
+.clapboard.c {
+    height: 50px;
+    border-bottom: 5px solid #e5c6a2;
+    background-color: #b79678;
+    transform: translateZ(70px) rotateY(90deg) rotateX(90deg) translateZ(-105px) rotateZ(5deg) translateX(-33px);
+}
+
+.clapboard.d {
+    height: 50px;
+    border-bottom: 5px solid #e5c6a2;
+    background-color: #b79678;
+    transform: translateZ(70px) rotateY(90deg) rotateX(90deg) translateZ(-40px) rotateZ(5deg) translateX(-33px);
+}
+
+.clapboard.e {
+    height: 50px;
+    border-bottom: 5px solid #e5c6a2;
+    background-color: #b79678;
+    transform: translateZ(70px) rotateY(90deg) rotateX(90deg) translateZ(-75px) rotateZ(5deg) translateX(-87px);
+}
+
+/* 沙发 */
+/* 沙发 */
+/* 沙发 */
+/* 沙发 */
+/* 沙发 */
+/* 沙发 */
+/* 沙发 */
+/* 沙发 */
+/* 沙发 */
+/* 沙发 */
+/* 沙发 */
+.sofa {
+    position: absolute;
+    top: -220px;
+    left: -90px;
+}
+
+.sofa_a {
+    perspective: 3000;
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    /* animation: BesideTable 30s infinite; */
+    z-index: 1;
+}
+
+.sofa_a_top,
+.sofa_a_bottom,
+.sofa_a_front,
+.sofa_a_back,
+.sofa_a_left,
+.sofa_a_right {
+    position: absolute;
+    background-color: black;
+    width: 30px;
+    height: 80px;
+    top: 25px;
+    left: 25px;
+}
+
+.sofa_a_top {
+    width: 100px;
+    background-color: gray;
+    transform: translateZ(10px) rotateY(90deg) translateX(-15px) translateZ(-50px);
+}
+
+.sofa_a_front {
+    /* 柜子右 */
+    width: 30px;
+    height: 80px;
+    background-color: pink;
+    transform: translateZ(35px) rotateX(90deg) translateZ(40px);
+}
+
+.sofa_a_back {
+    /* 柜子左 */
+    width: 30px;
+    height: 80px;
+    background-color: #30689a;
+    transform: translateZ(35px) rotateX(90deg) translateZ(-40px);
+}
+
+.sofa_a_left {
+    /* 柜子上 */
+    background-color: #4a83b8;
+    transform: translateZ(75px);
+}
+
+.sofa_a_right {
+    width: 76px;
+    height: 80px;
+    background-color: #3c78ab;
+    transform: translateZ(99px) rotateY(90deg) translateX(24px) translateZ(25px) translateY(19px);
+}
+
+/* 沙发第二部分 */
+.sofa_b {
+    perspective: 3000;
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 200px;
+    left: 400px;
+    /* animation: BesideTable 30s infinite; */
+    z-index: 1;
+}
+
+.sofa_b_top,
+.sofa_b_bottom,
+.sofa_b_front,
+.sofa_b_back,
+.sofa_b_left,
+.sofa_b_right {
+    position: absolute;
+    background-color: black;
+    width: 30px;
+    height: 80px;
+    top: 25px;
+    left: 25px;
+}
+
+.sofa_b_top {
+    width: 100px;
+    background-color: gray;
+    transform: translateZ(10px) rotateY(90deg) translateX(-15px) translateZ(-50px);
+}
+
+.sofa_b_front {
+    /* 柜子右 */
+    width: 30px;
+    height: 80px;
+    background-color: pink;
+    transform: translateZ(35px) rotateX(90deg) translateZ(40px);
+}
+
+.sofa_b_back {
+    /* 柜子左 */
+    width: 30px;
+    height: 80px;
+    background-color: #2e689a;
+    transform: translateZ(35px) rotateX(90deg) translateZ(-40px);
+}
+
+.sofa_b_left {
+    /* 柜子上 */
+    background-color: #4884bc;
+    transform: translateZ(75px);
+}
+
+.sofa_b_right {
+    width: 76px;
+    height: 80px;
+    background-color: #3c77ad;
+    transform: translateZ(100px) rotateY(90deg) translateX(24px) translateZ(25px) translateY(19px);
+}
+
+/* 沙发第三部分 */
+.sofa_c {
+    perspective: 3000;
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 200px;
+    left: 300px;
+    /* animation: BesideTable 30s infinite; */
+    z-index: 1;
+}
+
+@keyframes BesideTable {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.sofa_c_top,
+.sofa_c_bottom,
+.sofa_c_front,
+.sofa_c_back,
+.sofa_c_left,
+.sofa_c_right {
+    position: absolute;
+    background-color: black;
+    width: 85px;
+    height: 75px;
+    top: 25px;
+    left: -45px;
+}
+
+.sofa_c_top {
+    height: 65px;
+    border-right: 2px #3b739f solid;
+    background-color: #2e689c;
+    transform: translateZ(40px) rotateX(90deg) translateZ(-63px) translateX(30px) translateY(30px);
+}
+
+.sofa_c_back {
+    height: 70px;
+    background-color: #488cba;
+    transform: translateZ(90px) translateX(30px) translateY(25px) translateZ(10px);
+}
+
+.sofa_c_back::after {
+    content: '';
+    position: absolute;
+    left: 85px;
+    width: 5px;
+    height: 70px;
+    background-color: #407cb1;
+}
+
+/* 沙发第四部分 */
+.sofa_d {
+    perspective: 3000;
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 200px;
+    left: 385px;
+    /* animation: BesideTable 30s infinite; */
+    z-index: 1;
+}
+
+@keyframes BesideTable {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.sofa_d_top,
+.sofa_d_bottom,
+.sofa_d_front,
+.sofa_d_back,
+.sofa_d_left,
+.sofa_d_right {
+    position: absolute;
+    background-color: black;
+    width: 85px;
+    height: 75px;
+    top: 25px;
+    left: -45px;
+}
+
+.sofa_d_top {
+    height: 65px;
+    border-left: 2px #3b739f solid;
+    background-color: #2e689c;
+    transform: translateZ(40px) rotateX(90deg) translateZ(-62px) translateX(30px) translateY(28px);
+}
+
+/* .sofa_c_front {
+    width: 30px;
+    height: 80px;
+    background-color: pink;
+    transform: translateZ(35px) rotateX(90deg) translateZ(40px);
+} */
+
+.sofa_d_back {
+    height: 70px;
+    width: 74px;
+    background-color: #488cba;
+    /* background-color: salmon; */
+    transform: translateZ(90px) translateX(34px) translateY(25px) translateZ(10px);
+}
+
+/* 靠背 */
+/* 靠背 */
+.sofa_e {
+    perspective: 3000;
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 170px;
+    left: 340px;
+    /* animation: BesideTable 30s infinite; */
+    transform: rotate(90deg) rotateY(-15deg);
+    z-index: 1;
+}
+
+.sofa_e_top,
+.sofa_e_bottom,
+.sofa_e_front,
+.sofa_e_back,
+.sofa_e_left,
+.sofa_e_right {
+    position: absolute;
+    background-color: black;
+    width: 30px;
+    height: 80px;
+    top: 25px;
+    left: 25px;
+}
+
+.sofa_e_top {
+    width: 100px;
+    background-color: gray;
+    transform: translateZ(10px) rotateY(90deg) translateX(-15px) translateZ(-50px);
+}
+
+.sofa_e_front {
+    /* 柜子右 */
+    width: 30px;
+    height: 80px;
+    background-color: #3772a3;
+    transform: translateZ(35px) rotateX(90deg) translateZ(40px);
+}
+
+.sofa_e_back {
+    /* 柜子左 */
+    width: 30px;
+    height: 80px;
+    background-color: #30689a;
+    transform: translateZ(35px) rotateX(90deg) translateZ(-40px);
+}
+
+.sofa_e_left {
+    /* 柜子上 */
+    background-color: #4a83b8;
+    transform: translateZ(75px);
+}
+
+.sofa_e_right {
+    width: 76px;
+    height: 80px;
+    background-color: #3c78ab;
+    transform: translateZ(99px) rotateY(90deg) translateX(52px) translateZ(0px) translateY(-10px);
+}
+
+.sofa_f {
+    perspective: 3000;
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 170px;
+    left: 425px;
+    /* animation: BesideTable 30s infinite; */
+    transform: rotate(90deg) rotateY(-15deg);
+    z-index: 1;
+}
+
+.sofa_f_top,
+.sofa_f_bottom,
+.sofa_f_front,
+.sofa_f_back,
+.sofa_f_left,
+.sofa_f_right {
+    position: absolute;
+    background-color: black;
+    width: 30px;
+    height: 80px;
+    top: 25px;
+    left: 25px;
+}
+
+.sofa_f_top {
+    width: 100px;
+    background-color: gray;
+    transform: translateZ(10px) rotateY(90deg) translateX(-15px) translateZ(-50px);
+}
+
+.sofa_f_front {
+    /* 柜子右 */
+    width: 30px;
+    height: 80px;
+    background-color: #3c77ad;
+    transform: translateZ(35px) rotateX(90deg) translateZ(40px);
+}
+
+.sofa_f_back {
+    /* 柜子左 */
+    width: 30px;
+    height: 80px;
+    background-color: #30689a;
+    transform: translateZ(35px) rotateX(90deg) translateZ(-40px);
+}
+
+.sofa_f_left {
+    /* 柜子上 */
+    background-color: #4a83b8;
+    transform: translateZ(75px);
+}
+
+.sofa_f_right {
+    width: 76px;
+    height: 80px;
+    background-color: #3c78ab;
+    transform: translateZ(99px) rotateY(90deg) translateX(52px) translateZ(0px) translateY(-10px);
+}
+
+.window {
+    position: absolute;
+    width: 200px;
+    height: 400px;
+    background-color: #7dc5d5;
+    top: 35px;
+    left: 30px;
+}
+
+.window span {
+    position: absolute;
+    top: 190px;
+    width: 200px;
+    height: 10px;
+    background-color: snow;
+}
+
+.flowerpot {
+    position: absolute;
+    transform-style: preserve-3d;
+    left: 370px;
+    top: -20px;
+    transform: scale(.6);
+}
+
+.flowerpot_top,
+.flowerpot_bottom,
+.flowerpot_left,
+.flowerpot_right,
+.flowerpot_front {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 100px;
+    height: 100px;
+    background-color: snow;
+}
+
+.flowerpot_top {
+    background-color: #dee9e9;
+    transform: translateZ(100px) rotateY(90deg) translateX(50px) translateZ(-50px);
+}
+
+.flowerpot_bottom {
+    background-color: #d6dad1;
+    transform: translateZ(100px) rotateY(90deg) translateX(50px) translateZ(50px);
+}
+
+.flowerpot_left {
+    background-color: #eaeae0;
+    transform: translateZ(100px) rotateX(90deg) translateY(-50px) translateZ(50px);
+}
+
+.flowerpot_right {
+    background-color: #bdc2b9;
+    transform: translateZ(100px) rotateX(90deg) translateY(-50px) translateZ(-50px);
+}
+
+.flowerpot_front {
+    perspective: 3000;
+    transform-style: preserve-3d;
+    box-shadow: inset 10px 10px 80px 1px gray;
+    transform: translateZ(80px) scale(.8);
+}
+
+.plant {
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    top: 35px;
+    left: 20px;
+    background-color: green;
+    border-radius: 30px 30px 40px 40px;
+    transform: translateZ(30px) rotateY(90deg);
+}
+
+.plant.a {
+    top: 30px;
+    left: 60px;
+}
+
+.plant.b {
+    width: 70px;
+    top: 5px;
+    left: 0px;
+}
+
+.plant.c {
+    width: 70px;
+    top: 60px;
+    left: 50px;
+}
+
+.plant.d {
+    width: 50px;
+    top: 70px;
+    left: 20px;
+}
